@@ -11,6 +11,8 @@
 !requirements.txt
 !*scraper
 !README.md
-!.env
 !LICENSE
-
+!/utils
+!/statis
+!/templates
+!/static
