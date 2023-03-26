@@ -16,3 +16,7 @@
 !/statis
 !/templates
 !/static
+!*.jinja2
+!fragments
+!config.py
+
