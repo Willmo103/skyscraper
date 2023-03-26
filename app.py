@@ -15,6 +15,7 @@ Single Page App with api endpoints
 
 """
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from jinja2 import Template
 
 # Initialize Flask App
 app = Flask(__name__)
