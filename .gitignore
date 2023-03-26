@@ -11,3 +11,6 @@
 !requirements.txt
 !*scraper
 !README.md
+!.env
+!LICENSE
+
