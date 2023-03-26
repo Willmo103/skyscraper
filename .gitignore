@@ -1,0 +1,13 @@
+*
+!.gitignore
+!main.py
+!/api
+!app.py
+!scraper.py
+!__init__.py
+!/tests
+!test*.py
+!/data
+!requirements.txt
+!*scraper
+!README.md
