@@ -14,8 +14,13 @@ Single Page App with api endpoints
 ----------------------------------
 
 """
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from jinja2 import Template
+from config import conf
+import os
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, make_response, abort, send_from_directory, send_file, Response, session, Request
+
+# from flask.templating
+
+# from flask_cors import CORS TODO - add CORS
 
 # Initialize Flask App
 app = Flask(__name__)
@@ -25,10 +30,12 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 app.config["DEBUG"] = True
 app.config["ENV"] = "development"
-app.template_folder = "templates"
-app.static_folder = "static"
+app.template_folder = os.environ.get("template_folder")
+app.static_folder = os.environ.get("static_folder")
 
 # middleware
+
+
 @app.before_request
 def before_request():
     pass
@@ -58,7 +65,8 @@ def index():
             module, and models for saving search
             criteria with better results and scrub
             it for creating tensorflow model"""
-    return render_template("index.html")
+    return render_template("index.html", title="Skyscraper")  # q: wahts wrong with this?
+#
 
 
 # Run Flask App
